@@ -9,8 +9,8 @@
 
 ## ②使用環境
 アーキテクチャは以下の通りです。
-<br>
-
+<br><br>
+<img src="https://github.com/Shuma-Yamamoto/images/blob/main/2022-05-15.png" width="80%">
 <br>
 EC2-Amazon Linux 2
 <br>
@@ -18,11 +18,24 @@ Python-3.7
 
 ## ③使用方法
 １．アーキテクチャに従ってEC2を立ち上げる。
-<br>
-２．コンソール画面を起動し、当該リポジトリをクローンする。
-<br>
+<br><br>
+２．EC2 Instance Connectを起動し、当該リポジトリをクローンする。
+```
+$ git clone git@github.com:Shuma-Yamamoto/Portfolio-Scraping.git
+```
 ３．必要なライブラリをインストールする。
 <br>
-　　(※仮想環境へのインストールを推奨)
-<br>
+　(※仮想環境へのインストールを推奨)
+```
+$ pip install reqests
+$ pip install beautifulsoup4
+$ pip install joblib
+$ pip install pandas
+$ pip install tqdm
+$ pip install boto3
+```
 ４．app.pyを実行する。
+```
+$ nohup python3 app.py &
+```
+　(※nohupを使用することでバックグラウンド処理が可能)
